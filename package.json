@@ -6,6 +6,11 @@
   "repository": "https://github.com/diogosalazar/vue-cli-plugin-browser-sync.git",
   "author": "Diogo Salazar",
   "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "browser-sync"
+  ],
   "dependencies": {
     "@vue/cli-service": "^3.0.0-rc.3",
     "@vue/cli-shared-utils": "^3.0.0-rc.3",
