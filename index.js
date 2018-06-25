@@ -42,7 +42,7 @@ module.exports = (api, options) => {
     const projectDevServerOptions = options.devServer || {}
 
     // load user BrowserSync options
-    const projectBSOptions = options.pluginOptions.browserSync || {}
+    const projectBSOptions = options.pluginOptions && options.pluginOptions.browserSync || {}
 
     // resolve webpack config
     const webpackConfig = api.resolveWebpackConfig();
