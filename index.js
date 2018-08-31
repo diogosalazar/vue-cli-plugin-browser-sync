@@ -89,7 +89,7 @@ module.exports = (api, options) => {
     // Sets up webpack middlewares
     const webpackMiddlewares = [];
     const devMiddleware = WebpackDevMiddleware(compiler, {
-      publicPath: options.baseUrl,
+      publicPath: projectBSOptions.baseUrl || options.baseUrl,
       quiet: true,
       noInfo: true,
       stats: false,
