@@ -125,6 +125,7 @@ module.exports = (api, options) => {
     ;['SIGINT', 'SIGTERM'].forEach(signal => {
       process.on(signal, () => {
         server.exit()
+        process.exit(0)
       })
     })
 
@@ -135,6 +136,7 @@ module.exports = (api, options) => {
         if (data.toString() === 'close') {
           console.log('got close signal!')
           server.exit()
+          process.exit(0)
         }
       })
     }
