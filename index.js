@@ -62,6 +62,7 @@ module.exports = (api, options) => {
     portfinder.basePort = args.port || process.env.PORT || projectBSOptions.port || projectDevServerOptions.port || defaults.port
     const proxy = projectBSOptions.proxy || projectDevServerOptions.proxy
     const port = await portfinder.getPortPromise()
+    const serveStatic = projectBSOptions.serveStatic
 
     const urls = prepareURLs(
       protocol,
@@ -119,7 +120,8 @@ module.exports = (api, options) => {
       middleware,
       open: false,
       port,
-      proxy
+      proxy,
+      serveStatic
     });
 
     ;['SIGINT', 'SIGTERM'].forEach(signal => {
